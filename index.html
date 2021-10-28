@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style1.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <header class="head1 bg-light">
+        <div class="row">
+            <div class="logo col-5 col-md-1 ">
+                 <img src="data:image/png;base64,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" alt="">
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light  col-md-9">
+              
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon col-3 "></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ">
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Mobile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Featured</a>
+                      <a class="dropdown-item" href="#">Gaming</a>
+                      
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      TV&AV
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Featured</a>
+                      <a class="dropdown-item" href="#">Life Style TVs</a>
+                      
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Home Appliances
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Featured</a>
+                      <a class="dropdown-item" href="#">Care Packs</a>
+                      
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Computing
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Featured</a>
+                      <a class="dropdown-item" href="#">Monitors</a>
+                      
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Displays
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Smart signage</a>
+                      <a class="dropdown-item" href="#">LED signage</a>
+                      
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Offers
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">View all Offers</a>
+                      <a class="dropdown-item" href="#">Smart way to buy</a>
+                      
+                  </li>
+                  
+                </ul>
+                <div class="icons col-md-3 ">
+                  <div class="icon" >
+                    <i class="fas fa-search"></i>
+                  </div>
+                  <div class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </div>
+                  <div class="icon">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div>  
+                
+              </div>  
+             
+              
+              
+            </nav> 
+        </div>    
+    <section>
+        <div class="container">
+           <div class="row pt-4">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://images.samsung.com/is/image/samsung/assets/in/HomepageKV_Foldable_1440x640.jpg?imwidth=1366" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://images.samsung.com/is/image/samsung/assets/in/KV_1440x640_02_c.png?$ORIGIN_PNG$" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://images.samsung.com/is/image/samsung/assets/in/9458_Festive-banner_Big-TV_1440x640.jpg?imwidth=1366" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+         </div>
+    </section>     
+            <section class="secone">
+                <div class="row">
+                  <img class="hallimg mx-auto"src="hall-of-fame-new.webp" alt="" >          
+
+              </div>
+
+            </section>
+              <div class="container">
+               <div class="row"> 
+               <div class=" col-md-4 col-12">
+                  <div class="card" style="width: 19rem;margin-top: 2em;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/p6pim/in/2108/gallery/in-galaxy-z-fold3-f926-5g-sm-f926bzkdinu-474118709?$PD_GALLERY_L_JPG$" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center"style="font-weight:bold">Galaxy Zfold 3</h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">149999</SPAN><br>135000</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center"><i>Buy the new amaizing Galaxy Fold</i></li>
+                      <li class="list-group-item text-center"><i>7000/- off on HDFC cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary mx-auto">Buy Now</a>
+                    </div>
+                    
+                  </div>
+                </div>  
+                <div class=" col-md-4 col-12">
+                  <div class="card" style="width: 19rem;margin-top: 2em;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/p6pim/in/2108/gallery/in-galaxy-z-flip3-f711-5g-sm-f711bzkainu-474119038?$PD_GALLERY_L_JPG$" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center"style="font-weight:bold">Galaxy Z flip3</h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">95999</SPAN><br>84999</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center"><i>Buy the new amaizing Galaxy Flip</i></li>
+                      <li class="list-group-item text-center"><i>5000/- off on HDFC cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                    
+                  </div>
+
+                  
+                  
+
+                </div>
+                <div class="col-md-4 col-12">
+                  <div class="card" style="width: 19rem;margin-top: 2em;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-g991bzadinu/gallery/in-galaxy-s21-5g-g991-371114-sm-g991bzadinu-410189271?$PD_GALLERY_L_JPG$" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center"style="font-weight:bold">Galaxy S21 5G</h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">83999</SPAN><br>52999</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center"><i>Buy the new amaizing Galaxy </i></li>
+                      <li class="list-group-item text-center"><i>3000/- off on SBI credit cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                    
+                  </div>
+
+
+
+
+
+
+
+
+                </div>
+               </div> 
+
+              </div>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 col-12">
+          
+                   <div class="card pt-2" style="width: 19rem;margin-top: 2em;">
+                     <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/p6pim/in/qa55qn90aaklxl/gallery/in-neo-qled-qn90a-384003-qa55qn90aaklxl-425646525?$720_576_PNG$" alt="Card image cap">
+                     <div class="card-body">
+                       <h5 class="card-title text-center" style="font-weight: bold;">Neo QLED 4k Smart TV (55)</h5>
+                       <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">149999</SPAN><br>135000</p>
+                     </div>
+                     <ul class="list-group list-group-flush">
+                       <li class="list-group-item text-center"><i>Best buy</i></li>
+                       <li class="list-group-item text-center"><i>5000/- cashback on HDFC cards</i></li>
+                     </ul>
+                     <div class="card-body text-center">
+                       <a href="#" class="btn btn-primary">Buy Now</a>
+                     </div>
+                   </div>
+                   
+                   
+ 
+                 </div>
+                 <div class="col-md-4 col-12">
+                  <div class="card pt-2" style="width: 19rem;margin-top: 2em;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/assets/in/offer/online/samsung-offer-rush/qled-4k-serif.jpg?$PD_GALLERY_L_SHOP_JPG$" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center" style="font-weight: bold;"> QLED 4k The serif (44)</h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">94999</SPAN><br>86999</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center"><i>Best buy</i></li>
+                      <li class="list-group-item text-center"><i>6000/- cashback on SBI cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                  </div>
+
+
+                 </div>
+                 <div class="col-md-4 col-12">
+                  <div class="card pt-2" style="width: 19rem;margin-top: 2em;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/assets/in/offer/samsung-week/crystal.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center" style="font-weight: bold;">Crystal 4K UHD</h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">125900</SPAN><br>89990</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center"><i>4000/- off on samsung shop</i></li>
+                      <li class="list-group-item text-center"><i>3000/- off on HDFC cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                  </div>
+
+                 </div>
+                </div> 
+                </div> 
+ 
+               </div>
+              <div class="container">
+                <div class="row">
+                 <div class="col-md-4 col-12">
+                   <div class="card pt-2" style="width: 19rem;margin-top: 2em;">
+                     <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-t733nzsainu/gallery/in-galaxy-tab-s7-fe-t733-sm-t733nzsainu-497681516?$PD_GALLERY_L_JPG$" alt="Card image cap">
+                     <div class="card-body">
+                       <h5 class="card-title text-center" style="font-weight: bold;">Galaxy Tab S7FE</h5>
+                       <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">49999</SPAN><br>38500</p>
+                     </div>
+                     <ul class="list-group list-group-flush">
+                       <li class="list-group-item"><i>2000/- instant cashback on SBI cards</i></li>
+                       <li class="list-group-item"><i>2500/- off on HDFC cards</i></li>
+                     </ul>
+                     <div class="card-body text-center">
+                       <a href="#" class="btn btn-primary">Buy Now</a>
+                     </div>
+                   </div>
+                   
+ 
+                 </div>
+                 <div class="col-md-4 col-12">
+                  <div class="card pt-2" style="width: 19rem;margin-top: 2em;;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/in-galaxy-tab-s7-t875-sm-t875nzkainu-frontmysticblack-290447864?$PD_GALLERY_L_JPG$" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center" style="font-weight: bold;">Galact Tab s7</h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">69999</SPAN><br>64999</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><i>3000/- instant cashback on SBI cards</i></li>
+                      <li class="list-group-item"><i>2400/- off on HDFC cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                  </div>
+
+                 </div>
+                 <div class="col-md-4 col-12">
+                  <div class="card pt-2" style="width: 19rem;margin-top: 2em;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/in-galaxy-tab-a7-wifi-t500n-sm-t500nzdpinu-frontportraitgold-311867309?$2052_1641_PNG$" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center" style="font-weight: bold;">Galaxy Tab A7 Lite</h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">49999</SPAN><br>38500</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center"><i>2500/- instant Cashback on SBI cards</i></li>
+                      <li class="list-group-item text-center"><i>3000/- off on HDFC cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                  </div>
+
+                 </div>
+                </div> 
+ 
+               </div>
+               <div class="container">
+                <div class="row">
+                 <div class="col-md-4 col-12">
+                   <div class="card pt-2" style="width: 19rem;margin-top: 2em;">
+                     <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/p6pim/in/2108/gallery/in-galaxy-watch4-classic-399241-sm-r895fzsainu-481181877?$2052_1641_PNG$" alt="Card image cap">
+                     <div class="card-body">
+                       <h5 class="card-title text-center" style="font-weight: bold;">Galaxy Watch5 classic</h5>
+                       <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">39890</SPAN><br>31999</p>
+                     </div>
+                     <ul class="list-group list-group-flush">
+                       <li class="list-group-item"><i>2000/- instant cashback on SBI cards</i></li>
+                       <li class="list-group-item"><i>2500/- off on HDFC cards</i></li>
+                     </ul>
+                     <div class="card-body text-center">
+                       <a href="#" class="btn btn-primary">Buy Now</a>
+                     </div>
+                   </div>
+                   
+ 
+                 </div>
+                 <div class="col-md-4 col-12">
+                  <div class="card pt-2" style="width: 19rem;margin-top: 2em;;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/p6pim/in/2108/gallery/in-galaxy-watch4-398879-sm-r870nzkainu-481111391?$2052_1641_PNG$" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center" style="font-weight: bold;">Galact Watch4 </h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">29999</SPAN><br>23999</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><i>3000/- instant cashback on SBI cards</i></li>
+                      <li class="list-group-item"><i>2400/- off on HDFC cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                  </div>
+
+                 </div>
+                 <div class="col-md-4 col-12">
+                  <div class="card pt-2" style="width: 19rem;margin-top: 2em;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/in/galaxy-note20/gallery/in-galaxy-buds-live-r180-sm-r180nzkainu-frontmysticblack-275652064?$684_547_PNG$" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center" style="font-weight: bold;">Galaxy Bud Live</h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">15999</SPAN><br>11999</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center"><i>2500/- instant Cashback on SBI cards</i></li>
+                      <li class="list-group-item text-center"><i>3000/- off on HDFC cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                  </div>
+
+                 </div>
+                </div> 
+ 
+               </div>
+               <div class="container">
+                <div class="row">
+                 <div class="col-md-4 col-12">
+                   <div class="card pt-2" style="width: 19rem;margin-top: 2em;">
+                     <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/in-front-loading-ww60r20glmatl-ww60r20glma-tl-white-265554007?$684_547_PNG$" alt="Card image cap">
+                     <div class="card-body">
+                       <h5 class="card-title text-center" style="font-weight: bold;">Front loading with Diamond drum</h5>
+                       <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">24999</SPAN><br>26999</p>
+                     </div>
+                     <ul class="list-group list-group-flush">
+                       <li class="list-group-item"><i>2000/- instant cashback on SBI cards</i></li>
+                       <li class="list-group-item"><i>2500/- off on HDFC cards</i></li>
+                     </ul>
+                     <div class="card-body text-center">
+                       <a href="#" class="btn btn-primary">Buy Now</a>
+                     </div>
+                   </div>
+                   
+ 
+                 </div>
+                 <div class="col-md-4 col-12">
+                  <div class="card pt-2" style="width: 19rem;margin-top: 2em;;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/in-front-loading-wd70m4443jwtl-wd70m4443jw-tl-white-319040577?$684_547_PNG$" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center" style="font-weight: bold;">Wash dryer with digital inverter </h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">459000</SPAN><br>32999</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><i>3000/- instant cashback on SBI cards</i></li>
+                      <li class="list-group-item"><i>2400/- off on HDFC cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                  </div>
+
+                 </div>
+                 <div class="col-md-4 col-12">
+                  <div class="card pt-2" style="width: 19rem;margin-top: 2em;">
+                    <img class="card-img-top" src="https://images.samsung.com/is/image/samsung/in-top-loading-wa70t4262gstl-wa70t4262gs-tl-silver-silver-246890530?$PD_GALLERY_L_SHOP_JPG$" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title text-center" style="font-weight: bold;">Top load with inverter</h5>
+                      <p class="card-text text-center"><SPAN STYLE="text-decoration:line-through;font-weight: 600;">16800</SPAN><br>12999</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center"><i>2500/- instant Cashback on SBI cards</i></li>
+                      <li class="list-group-item text-center"><i>3000/- off on HDFC cards</i></li>
+                    </ul>
+                    <div class="card-body text-center">
+                      <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                  </div>
+
+                 </div>
+                </div> 
+ 
+               </div>
+              
+               <footer class="w-100 py-4 flex-shrink-0 ">
+                <div class="container py-4">
+                    <div class="row gy-4 gx-5 pt-3">
+                        <div class="col-lg-4 col-md-6">
+                            <h5 class="h1 text-white">SAMSUNG</h5>
+                            <p class="small text-muted">Samsung Week Sale is the best time for purchasing Smartphones, Tablets, TV, Refrigerators, AC, Washing machines, Microwave Oven and Accessories. The sale will start on Oct 25th and will last through Nov 2nd.</p>
+                            <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Samsung.com</a></p>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <ul class="list-unstyled text-muted">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Get started</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6">
+                            <h5 class="text-white mb-3">Email for getting recent updates</h5>
+                            <p class="small text-muted"></p>
+                            <form action="#">
+                                <div class="input-group mb-3">
+                                    <input class="form-control" type="email" placeholder="Recipient's email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>   
+
+  </header> 
+    
+
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+</body>
+</html>
